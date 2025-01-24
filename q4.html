@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calculateSumAndAverage() {
+        let numbers = [];
+        let sum = 0;
+
+        while (true) {
+          let input = prompt("Enter a positive number (or 0 to finish):");
+          let number = parseFloat(input);
+
+          if (number === 0) {
+            break;
+          }
+
+          if (number > 0) {
+            numbers.push(number);
+            sum += number;
+          } else {
+            alert("Please enter a positive number!");
+          }
+        }
+
+        if (numbers.length > 0) {
+          let average = sum / numbers.length;
+          console.log(`Sum: ${sum}`);
+          console.log(`Average: ${average.toFixed(2)}`);
+        } else {
+          console.log("No positive numbers were entered.");
+        }
+      }
+
+      calculateSumAndAverage();
+    </script>
+  </body>
+</html>

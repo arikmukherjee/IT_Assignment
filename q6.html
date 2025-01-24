@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function countNumbers(numbers) {
+        let negativeCount = 0;
+        let positiveCount = 0;
+        let zeroCount = 0;
+        for (let number of numbers) {
+          if (number < 0) {
+            negativeCount++;
+          } else if (number > 0) {
+            positiveCount++;
+          } else {
+            zeroCount++;
+          }
+        }
+        return { negativeCount, positiveCount, zeroCount };
+      }
+      const numbers = [-2, 0, 5, -1, 0, 3, -4];
+      const counts = countNumbers(numbers);
+      document.write("Negative numbers:", counts.negativeCount + "<br>");
+      document.write("Positive numbers:", counts.positiveCount + "<br>");
+      document.write("Zeros:", counts.zeroCount);
+    </script>
+  </body>
+</html>
